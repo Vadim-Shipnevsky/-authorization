@@ -14,9 +14,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" >
+      <body className={inter.className}>
+      <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-login="wdPororoBot" data-size="large" data-auth-url="https://authorization-five.vercel.app/" data-request-access="write"></script>
+        {children}</body>
     </html>
   )
 }

@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
        
-      <Link href={'https://telegram.org/js/telegram-widget.js?22'} >
+      <Link href={'https://oauth.telegram.org/auth?bot_id=547043436&origin=https%3A%2F%2Fcore.telegram.org&embed=1&request_access=write&return_to=https%3A%2F%2Fcore.telegram.org%2Fwidgets%2Flogin'} >
         telegram
       </Link>
     </main>

@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import React from 'react';
@@ -12,13 +13,14 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode, params : any
 }) {
+
   return (
     <html lang="en" >
-      <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-login="samplebot" data-size="large" data-auth-url="https://authorization-five.vercel.app/" data-request-access="write"></script>
       <body className={inter.className}>
-        {children}</body>
+          {children}
+      </body>
     </html>
   )
 }

@@ -1,14 +1,16 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+'use client'
 import Link from 'next/link'
+import { useEffect } from 'react';
+import { Helmet } from "react-helmet";
+import { SessionProvider } from "next-auth/react";
+import Auth from './Auth';
 
-export default function Home() {
+export default function Home( {params: { session, ...params}} : any ) {
   return (
-    <main className={styles.main}>
-       
-      <Link href={'https://oauth.telegram.org/auth?bot_id=547043436&origin=https%3A%2F%2Fcore.telegram.org&embed=1&request_access=write&return_to=https%3A%2F%2Fcore.telegram.org%2Fwidgets%2Flogin'} >
-        telegram
-      </Link>
-    </main>
+    <SessionProvider session={session}>
+      <main >
+        <Auth />
+      </main>
+    </SessionProvider>
   )
 }
